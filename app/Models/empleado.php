@@ -11,4 +11,8 @@ class empleado extends Model
 
     protected $table = "registro_de_empleados";
     public $timestamps = "false";
+
+    public function users(){
+        return $this->belongsTo(User::class, 'usuario');
+    }
 }
